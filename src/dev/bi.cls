@@ -152,6 +152,11 @@ ClassMethod checkDashboards(stopOnError As %Boolean = 0) As %Status
 	return sc
 }
 
+/// alias for checkDashboards
+ClassMethod checkAllDashboards(stopOnError as %Boolean=0) As %Status
+{
+	return ..checkDashboards(stopOnError)
+}
 /// do ##class(dev.bi).checkDashboard("Basic Dashboard Demo.dashboard")
 ClassMethod checkDashboard(dashboardName, ByRef countOfPivots = 0, ByRef countOfPitotErrors = 0, ByRef countOfControlErrors = 0, ByRef scStop = 0) As %Status
 {
